@@ -17,4 +17,13 @@ Vagrant.configure("2") do |config|
     # Shell provision script
     sun.vm.provision "shell", path: "provision/scripts/sun.sh" 
   end
+
+  # Mercury. First managed node
+  config.vm.define "mercury" do |mercury|
+    mercury.vm.box = "generic/ubuntu2104"
+    mercury.vm.hostname = "mercury"
+
+  # Shell provision script
+    mercury.vm.provision "shell", path: "provision/scripts/mercury.sh"   
+  end
 end
