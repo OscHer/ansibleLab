@@ -30,5 +30,6 @@ Vagrant.configure("2") do |config|
   # Post-Install script
   config.vm.define "sun" do |sun|
     sun.vm.provision "shell", path: "provision/scripts/sshkeys.sh" 
+    sun.vm.provision "shell", path: "provision/scripts/ansible-check.sh" 
   end 
 end
