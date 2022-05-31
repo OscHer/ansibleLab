@@ -26,4 +26,9 @@ Vagrant.configure("2") do |config|
   # Shell provision script
     mercury.vm.provision "shell", path: "provision/scripts/mercury.sh"   
   end
+
+  # Post-Install script
+  config.vm.define "sun" do |sun|
+    sun.vm.provision "shell", path: "provision/scripts/sshkeys.sh" 
+  end 
 end
