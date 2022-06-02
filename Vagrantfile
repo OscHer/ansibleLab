@@ -32,4 +32,15 @@ Vagrant.configure("2") do |config|
     sun.vm.provision "shell", path: "provision/scripts/sshkeys.sh" 
     sun.vm.provision "shell", path: "provision/scripts/ansible-check.sh" 
   end 
+
+  # Ansible provisioning
+  # We don't actually need this, but defining it we can retrieve
+  # vagrant auto-generted inventory
+  config.vm.define "sun" do |controller|
+    controller.vm.provision :ansible_local do |ansible|
+      ansible.playbook = "provision/ansible/main.yml"
+      ansible.verbose = true
+      ansible.limit = "all"
+    end
+  end
 end
