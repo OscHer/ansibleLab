@@ -1,0 +1,4 @@
+alias.s=status -s
+alias.lg=log --oneline --graph --decorate --all
+alias.rp=push origin HEAD
+alias.visual=!gitk & > /dev/null
