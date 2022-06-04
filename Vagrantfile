@@ -14,6 +14,10 @@ Vagrant.configure("2") do |config|
       lv.cpus = 2
     end
 
+    sun.vm.provider "virtualbox" do |v,override|
+      override.vm.memory=2048
+    end
+
     # Shell provision script
     sun.vm.provision "shell", path: "provision/scripts/sun.sh" 
   end

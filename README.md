@@ -2,7 +2,7 @@
 
 ## Overview
 Main goal of this project is to create a quick 'n easy ansible lab for learning purposes.
-Main component of this project is a Vagrantfile which creates a Controller node based in Rockylinux and a maged node based in Ubuntu.
+Main component of this project is a Vagrantfile which creates a Controller node based in Rockylinux and a managed node based in Ubuntu.
 Since we want a fully functional ansible environment, we won't use ansible provisioner in our Vagrantfile to reduce dependencies. All provisioning will be done from shell scripts and, after that, our environment will be ready to be self sustained from the Controller node (Sun).
 
 ## Dependencies
