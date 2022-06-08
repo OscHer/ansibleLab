@@ -18,3 +18,20 @@ Since we want a fully functional ansible environment, we won't use ansible provi
 * cd ansibleLab
 * vagrant up
 * Enjoy
+
+## Disclaimer
+
+First functional version.
+
+At the end of the "vagrant up" procedure you will have a fully functional ansible lab for learning goals.           
+It consists in two nodes:
+* Sun: controller node. RHEL 8
+* Mercury: managed node. Ubuntu 21.04
+
+Private keys have been deployed but, please, take into account that this project goal consists of CREATING ONLY infrastructure you'll need to start learning ansible; not in having everything done from scratch. You'll have to provide your own inventory, needed software besides ansible and ansible-playbook and whatever you'll think you'll need. That is:
+
+NOW YOU'RE ON YOUR OWN.
+
+## Thanks
+Thanks to Esther Mora (https://www.linkedin.com/in/esthermoraoliver/) for bossing me around. You'll never know how useful a Project Manager is since you tend to procrastinate even in your own personal projects.
+
